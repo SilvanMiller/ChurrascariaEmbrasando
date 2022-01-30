@@ -51,27 +51,20 @@ $(document).ready(function() {
         cssEase: 'linear'
     });
 
-
-
-
-
-
     //BOTÃO VOLTAR AO TOPO
     $(window).scroll(function() {
         let position = $(this).scrollTop();
 
         if (position >= 718) {
-            $('#voltar-topo').addClass('scrollTop');
+            $('.voltar-topo').addClass('scrollTop');
         } else {
-            $('#voltar-topo').removeClass('scrollTop');
+            $('.voltar-topo').removeClass('scrollTop');
         }
     });
 
 
-
-
     //SUAVIZA O SCROLL PARA NAVEGAÇÃO
-    $('.nav-item a, header-link, .btn-adiante, #voltar-topo, .navbar-brand').click(function(link) {
+    $('.nav-item a, header-link, .btn-adiante, .voltar-topo, .navbar-brand .info').click(function(link) {
         link.preventDefault();
         let target = $(this).attr('href');
 
@@ -79,8 +72,6 @@ $(document).ready(function() {
             scrollTop: $(target).offset().top - 25
         }, 1000);
     });
-
-
 
 
 })
